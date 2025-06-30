@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    width: 100%;
+}
+
+#headerImgContainer {
+    width: 80%;
+    padding: 20px 10px;
+}
+
+img {
+    width: 100%;
+}
+
+#menuBarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-bottom: 7px;
+}
