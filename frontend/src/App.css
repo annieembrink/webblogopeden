@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Roboto-serif', sans-serif;
+  line-height: 1.2;
+  background-color: #FAFAFA;
+  color: #3B3A39;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
 .App {
   text-align: center;
 }
