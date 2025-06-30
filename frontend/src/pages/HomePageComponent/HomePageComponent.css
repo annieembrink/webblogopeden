@@ -52,6 +52,7 @@ img {
 
 .DyslexiaPrice {
     border-bottom: 1px solid #FAFAFA;
+    margin-bottom: 10px;
 }
 
 .DyslexiaTitle {
@@ -59,4 +60,17 @@ img {
     font-weight: 200;
     margin: 10px 0;
     /* margin: auto; */
+}
+
+p {
+    color: #FAFAFA;
+    font-weight: 200;
+}
+
+.m30px {
+    margin-bottom: 30px;
+}
+
+.m10px {
+    margin-bottom: 10px;
 }

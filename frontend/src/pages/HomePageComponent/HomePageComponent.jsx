@@ -34,7 +34,37 @@ const HomePageComponent = () => {
   </div>
   <div className="DyslexiaPrice">
   <h2 className="DyslexiaTitle">Dyslexiutredning</h2>
+  
   </div>
+  <div className="m10px">
+  <p>3-6 timmar</p>
+  <p className="m10px">8 000 kr</p>
+  <p>För alla åldrar</p>
+  <p>Väntetid 1-2 veckor</p>
+  <p>Ingår omfattande utredning samt intyg</p>
+  </div>
+  <button className="m30px">Boka nu</button>
+
+  <div className="DyslexiaImgContainer">
+    <img
+                src="/img/personsittingatcomputer.jpg"
+                alt="Site Logo"
+                className="logo"
+            />
+  </div>
+  <div className="DyslexiaPrice">
+  <h2 className="DyslexiaTitle">Språkutredning</h2>
+  
+  </div>
+  <div className="m10px">
+  <p>3-6 timmar</p>
+  <p className="m10px">8 000 kr</p>
+  <p>För alla åldrar</p>
+  <p>Väntetid 1-2 veckor</p>
+  <p>Ingår omfattande utredning samt intyg</p>
+  </div>
+  <button>Boka nu</button>
+
 
 </div>
 </div>
