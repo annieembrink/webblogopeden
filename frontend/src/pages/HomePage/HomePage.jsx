@@ -1,7 +1,7 @@
-import "./HomePageComponent.css"; // if you have styling
-import FooterComponent from "../../components/Footer/FooterComponent";
+import "./HomePage.css"; // if you have styling
+import FooterComponent from "../../components/FooterComponent/FooterComponent";
 
-const HomePageComponent = () => {
+const HomePage = () => {
 return (
 <div className="ComponentContainer">
 
@@ -66,4 +66,4 @@ return (
 );
 };
 
-export default HomePageComponent;
+export default HomePage;

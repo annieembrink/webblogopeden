@@ -1,14 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderComponent from './components/HeaderComponent/HeaderComponent';
-import HomePageComponent from './pages/HomePageComponent/HomePageComponent';
+import HomePage from './pages/HomePage/HomePage';
+import ContactForm from './pages/ContactPage/ContactPage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import PricesPage from './pages/PricesPage/PricesPage';
+import DigitalCarePage from './pages/DigitalCarePage/DigitalCarePage';
 
 function App() {
   return (
-    <div className="App">
-      <HeaderComponent/>
-      <HomePageComponent/>
-    </div>
+    <BrowserRouter>
+      <HeaderComponent />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/prices" element={<PricesPage />} />
+        <Route path="/digitalcare" element={<DigitalCarePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

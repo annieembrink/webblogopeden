@@ -156,6 +156,7 @@ p {
         display: flex;
         justify-content: space-between;
         margin-bottom: 100px;
+        max-width: 1000px;
     }
 
     #Language {
@@ -168,6 +169,10 @@ p {
 
     #Dyslexia img, #Language img {
         max-width: 500px;
+    }
+
+    .homePageContactButton button {
+        width: 80%;
     }
   /* Your desktop-specific styles here */
 }
