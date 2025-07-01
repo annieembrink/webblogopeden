@@ -124,7 +124,7 @@ h4 {
     margin-bottom: 10px;
 }
 
-.DyslexiaTitle {
+.DyslexiaTitle, .LanguageTitle {
     color: #FAFAFA;
     font-weight: 200;
     margin: 10px 0;
@@ -152,17 +152,21 @@ p {
 }
 
 @media (min-width: 700px) {
-    #Dyslexia {
+    #Dyslexia, #Language {
         display: flex;
         justify-content: space-between;
         margin-bottom: 100px;
     }
 
-    #Dyslexia button {
+    #Language {
+        flex-direction: row-reverse;
+    }
+
+    #Dyslexia button, #Language button {
         width: 100%;
     }
 
-    #Dyslexia img {
+    #Dyslexia img, #Language img {
         max-width: 500px;
     }
   /* Your desktop-specific styles here */
