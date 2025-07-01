@@ -1,4 +1,5 @@
 import "./HomePageComponent.css"; // if you have styling
+import FooterComponent from "../../components/Footer/FooterComponent";
 
 const HomePageComponent = () => {
 return (
@@ -57,9 +58,8 @@ return (
       <p>Ingår omfattande utredning samt intyg</p>
     </div>
     <button className="m60px">Kontakt och mer info</button>
-
-
   </div>
+<FooterComponent/>
 </div>
 
 );
