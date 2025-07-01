@@ -1,54 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 .HomePageBackgroundImgContainer {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    /* text-align: center; */
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100vw;
+  height: 600px;
+  /* background-image: url("/img/notebook.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.HomePageBackgroundImgContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* or black, depending on effect */
+  z-index: 1;
 }
 
 .HomePageWelcomeText {
-width: 95%;
-border-radius: 10px;
-background-color: white;
-color: #44745F;
-height: 100%;
-opacity: 0.8;
-padding: 70px 30px;
-text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 70%;
+  color: black;
+  color: #44745F;
+  /* color: darkgray; */
+  text-align: center;
+  margin-top: 70px;
 }
 
-h1, h2, h3, h4 {
+.homePageContactButton button {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: 10px 20px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none; 
+    background-color: #44745F;
+    color: #FAFAFA;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.homePageContactButton button:hover {
+    transform: scale(1.05); /* Grows by 5% */
+}
+
+
+h1,
+h2,
+h3,
+h4 {
     margin-bottom: 15px;
     font-weight: 400;
 }
 
+h1 {
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
 .HomePageServices {
-    /* height: 400px; */
     background-color: #44745F;
     margin-bottom: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    padding: 20px;
+    padding: 40px;
+}
+
+.HomePageServices button {
+    width: 50%;
+    padding: 5px 10px;
 }
 
 .DyslexiaImgContainer {
     /* width: 90%; */
     /* height: 400px; */
-    overflow: hidden;
+    /* max-height: 200px; */
+    /* overflow: hidden; */
     /* padding: 20px; */
     /* margin: auto; */
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
 }
 
-img {
+.DyslexiaImgContainer img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    /* height: 100%; */
-    /* border-radius: 10px; */
-    opacity: 0.7;
+    object-position: center top;
 }
+
 
 .DyslexiaPrice {
     border-bottom: 1px solid #FAFAFA;
@@ -59,7 +126,6 @@ img {
     color: #FAFAFA;
     font-weight: 200;
     margin: 10px 0;
-    /* margin: auto; */
 }
 
 p {
