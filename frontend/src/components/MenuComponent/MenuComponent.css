@@ -1,6 +1,6 @@
 #menuBar {
   width: 100vw;
-  /* height: 100vh; */
+  height: 100vh;
   background-color: #C6DACF;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   margin: auto;
@@ -41,3 +41,22 @@
 #menuBar.closed {
   display: none;
 }
+
+.menuLink {
+    width: 30%;
+    text-align: center;
+  padding: 10px 20px;
+  margin: 20px;
+  background-color: #44745F;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menuLink:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+

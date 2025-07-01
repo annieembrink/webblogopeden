@@ -9,7 +9,7 @@ import DigitalCarePage from './pages/DigitalCarePage/DigitalCarePage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <HeaderComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/digitalcare" element={<DigitalCarePage />} />
       </Routes>
       <FooterComponent/>
-    </BrowserRouter>
+      </>
   );
 }
 
