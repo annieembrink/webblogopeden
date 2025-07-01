@@ -1,0 +1,54 @@
+ #menuBar {
+    width: 90vw;
+    background-color: #C6DACF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  #menuBar button {
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #44745F;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  #menuBar button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* ul {
+    list-style: none;
+    margin: auto;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  li:first-child {
+    margin-top: 7px;
+  } */
+
+  .open {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        margin: 0;
+        height: 100%;
+    }
+
+    #menuBar.closed {
+        display: none;
+    }

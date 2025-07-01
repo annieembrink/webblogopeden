@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
+import MenuComponent from "../MenuComponent/MenuComponent";
 import "./HeaderComponent.css"; // if you have styling
 
 const HeaderComponent = () => {
@@ -20,9 +21,11 @@ const HeaderComponent = () => {
             />
         </div>
               {/* Menu component */}
-      {/* <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} /> */}
+      <MenuComponent 
+      isMenuOpen={isMenuOpen} 
+      toggleMenu={toggleMenu} 
+      />
 
-      {/* Hamburger / Close icon */}
       <div id="menuBarContainer" onClick={toggleMenu}>
         {isMenuOpen ? <FiX size={35} color="#44745F"/> : <FiMenu size={35} color="#44745F"/>}
       </div>
