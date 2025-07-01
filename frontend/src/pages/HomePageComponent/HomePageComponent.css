@@ -95,7 +95,7 @@ h4 {
 }
 
 .HomePageServices button {
-    width: 70%;
+    width: 60%;
     padding: 10px 20px;
     font-size: 1.2rem;
     border: none;
@@ -109,14 +109,8 @@ h4 {
     transform: scale(1.05); /* Grows by 5% */
 }
 
-.DyslexiaImgContainer {
-    /* width: 90%; */
-    /* height: 400px; */
-    /* max-height: 200px; */
-    /* overflow: hidden; */
-    /* padding: 20px; */
-    /* margin: auto; */
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+.HomePageServices p {
+    font-size: 1.2rem;
 }
 
 .DyslexiaImgContainer img {
@@ -124,7 +118,6 @@ h4 {
     object-fit: cover;
     object-position: center top;
 }
-
 
 .DyslexiaPrice {
     border-bottom: 1px solid #FAFAFA;
@@ -152,4 +145,27 @@ p {
 .m60px {
     margin-bottom: 60px;
 }
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 700px) {
+    #Dyslexia {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    #Dyslexia button {
+        width: 100%;
+    }
+
+    #Dyslexia img {
+        max-width: 500px;
+    }
+  /* Your desktop-specific styles here */
+}
+
 
