@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderComponent from './components/HeaderComponent/HeaderComponent';
+import FooterComponent from "./components/FooterComponent/FooterComponent";
 import HomePage from './pages/HomePage/HomePage';
 import ContactForm from './pages/ContactPage/ContactPage';
 import AboutPage from './pages/AboutPage/AboutPage';
@@ -17,6 +18,7 @@ function App() {
         <Route path="/prices" element={<PricesPage />} />
         <Route path="/digitalcare" element={<DigitalCarePage />} />
       </Routes>
+      <FooterComponent/>
     </BrowserRouter>
   );
 }

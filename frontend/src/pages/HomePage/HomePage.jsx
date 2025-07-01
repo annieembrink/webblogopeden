@@ -60,7 +60,6 @@ return (
       </div>
     </div>
   </div>
-  <FooterComponent />
 </div>
 
 );
