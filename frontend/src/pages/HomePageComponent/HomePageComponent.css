@@ -96,8 +96,14 @@ h4 {
 }
 
 .HomePageServices button {
-    width: 50%;
-    padding: 5px 10px;
+    width: 70%;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    color: #44745F;
+    background-color: #FAFAFA;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .DyslexiaImgContainer {
@@ -133,10 +139,14 @@ p {
     font-weight: 200;
 }
 
-.m30px {
-    margin-bottom: 30px;
-}
-
 .m10px {
     margin-bottom: 10px;
 }
+
+.m30px {
+    margin-bottom: 30px;
+}
+.m60px {
+    margin-bottom: 60px;
+}
+
