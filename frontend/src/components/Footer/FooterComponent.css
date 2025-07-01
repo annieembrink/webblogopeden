@@ -1,5 +1,18 @@
 .Footer {
-    height: 200px;
+    height: 400px;
     width: 100vw;
-    background-color: brown;
+    background-color: #adcfc0;
 }
+
+#footerImgContainer {
+    width: 100vw;
+    padding: 20px;
+}
+#footerImgContainer img {
+    width: 70%;
+}
+
+#footerContact {
+    padding: 20px;
+}
+
