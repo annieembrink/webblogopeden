@@ -1,0 +1,22 @@
+.digitalCareContainer p, .digitalCareContainer h3 {
+    color: #44745F;
+    color: black;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.digitalCareContainer {
+    padding: 20px 0;
+}
+
+#digitalText {
+    margin-top: 50px;
+    width: 90%;
+}
+
+#digitalText p {
+    font-weight: 400;
+}
+

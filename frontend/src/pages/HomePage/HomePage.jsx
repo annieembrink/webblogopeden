@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import FooterComponent from "../../components/FooterComponent/FooterComponent";
+import PricesPage from "../PricesPage/PricesPage";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -27,7 +28,9 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="HomePageServices">
+      <PricesPage/>
+
+      {/* <div className="HomePageServices">
         <div id="Dyslexia">
           <div className="DyslexiaImgContainer">
             <img src="/img/books.jpg" alt="Site Logo" className="logo" />
@@ -69,7 +72,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <FooterComponent />
     </div>

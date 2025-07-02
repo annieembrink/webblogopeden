@@ -6,7 +6,7 @@ const MenuComponent = ({ open, setOpen }) => {
     { label: "Hem", path: "/" },
     { label: "Om", path: "/about" },
     { label: "Digital vård", path: "/digitalcare" },
-    { label: "Tjänster", path: "/services" },
+    // { label: "Tjänster", path: "/services" },
     { label: "Priser", path: "/prices" },
     { label: "Kontakt", path: "/contact" },
   ];
