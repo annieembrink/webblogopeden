@@ -6,10 +6,12 @@ import ContactForm from './pages/ContactPage/ContactPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import PricesPage from './pages/PricesPage/PricesPage';
 import DigitalCarePage from './pages/DigitalCarePage/DigitalCarePage';
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+    <ScrollToTop/>
       <HeaderComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
