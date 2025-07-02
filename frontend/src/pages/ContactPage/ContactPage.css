@@ -1,7 +1,7 @@
 .contact-form {
   width: 80%;
     max-width: 500px;
-    margin: 70px auto;
+    margin: 70px auto 30px auto;
     padding: 2rem;
     background-color: #ffffff;
     border-radius: 12px;
@@ -45,4 +45,11 @@
   
   .contact-form button:hover {
     background-color: #44745F;
+  }
+
+  .contactContainer p {
+    color: black;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 40px;
   }
