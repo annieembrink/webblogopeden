@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FiMenu, FiX } from 'react-icons/fi';
 import MenuComponent from "../MenuComponent/MenuComponent";
 import "./HeaderComponent.css";
+import { useNavigate } from "react-router-dom";
 
 const HeaderComponent = () => {
 const [open, setOpen] = useState(false);
@@ -11,11 +12,22 @@ const toggleMenu = () => {
 setOpen(prev => !prev);
 };
 
+const navigate = useNavigate();
+
+const handleLogoClick = () => {
+  navigate("/");
+};
+
 return (
 <header className="header">
-  <div id="headerImgContainer">
-    <img src="/img/webblogopeden-high-resolution-logo-transparent.png" alt="Site Logo" className="logo" />
-  </div>
+<div id="headerImgContainer" onClick={handleLogoClick} style={{ cursor: "pointer" }}>
+  <img
+    src="/img/webblogopeden-high-resolution-logo-transparent.png"
+    alt="Site Logo"
+    className="logo"
+  />
+</div>
+
 
   {open && (
   <MenuComponent open={open} setOpen={setOpen} setActivePage={setActivePage} />

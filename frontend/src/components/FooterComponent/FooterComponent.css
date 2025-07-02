@@ -2,9 +2,9 @@
     height: 400px;
     width: 100vw;
     background-color: #adcfc0;
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0; */
 }
 
 #footerImgContainer {

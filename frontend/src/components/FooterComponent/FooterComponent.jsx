@@ -1,4 +1,4 @@
-import "./FooterComponent.css"; // if you have styling
+import "./FooterComponent.css"; 
 import { FaRegCopyright } from "react-icons/fa";
 
 
