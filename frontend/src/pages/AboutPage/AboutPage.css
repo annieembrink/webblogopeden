@@ -1,0 +1,11 @@
+.aboutText p {
+    color: #44745F;
+    font-weight: 400;
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.aboutText {
+    padding: 40px 0;
+}
