@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ContactPage.css"
+import "./ContactPage.css";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -10,25 +10,31 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData)
-    });
+    try {
+      const res = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    if (res.ok) {
-      alert("Message sent! Confirmation email has been sent.");
-      setFormData({ name: '', email: '', message: '' });
-    } else {
-      alert("Failed to send message.");
+      if (!res.ok) {
+        const errorData = await res.json();
+        alert("Failed to send message: " + (errorData.message || "Unknown error"));
+      } else {
+        alert("Message sent! Confirmation email has been sent.");
+        setFormData({ name: "", email: "", message: "" });
+      }
+    } catch (err) {
+      console.error("Network error:", err);
+      alert("Could not connect to the server. Please try again later.");
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="contact-form">
-      <input name="name"  required placeholder="Name" value={formData.name} onChange={handleChange} required />
-      <input name="email" required placeholder="Email" type="email" value={formData.email} onChange={handleChange} required />
-      <textarea name="message" required placeholder="Message" value={formData.message} onChange={handleChange} required />
+      <input name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+      <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+      <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} required />
       <button type="submit">Send</button>
     </form>
   );
