@@ -9,3 +9,9 @@
 .aboutText {
     padding: 40px 0;
 }
+
+@media (min-width: 700px) {
+  .aboutText p {
+    width: 50%;
+  }
+}

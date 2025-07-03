@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import "./ContactPage.css";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  const handleChange = (e) =>
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/contact", {
+      const res = await fetch("https://webblogopeden-backend-1.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -32,13 +37,32 @@ export default function ContactForm() {
 
   return (
     <div className="contactContainer">
-    <form onSubmit={handleSubmit} className="contact-form">
-      <input name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
-      <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-      <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} required />
-      <button type="submit">Send</button>
-    </form>
-    <p>webblogopeden@gmail.com</p>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <input
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+      <p>webblogopeden@gmail.com</p>
     </div>
   );
 }

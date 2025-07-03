@@ -3,7 +3,7 @@ import "./DigitalCarePage.css"
 const DigitalCarePage = () => {
 return (
 
-<div>
+<div className="digitalCareWrapper">
 
     <div className="digitalCareContainer HomePageBackgroundImgContainer"
         style={{ backgroundImage: `url("/img/personsittingatcomputer.jpg")` }}>
