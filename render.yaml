@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: webblogopeden-frontend
+    env: node
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm install && npm start
+    staticPublishPath: frontend/build
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+
+  - type: web
+    name: webblogopeden-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
