@@ -1,12 +1,10 @@
-schemaVersion: 1
-
 services:
-  - type: static
+  - type: web
     name: webblogopeden-frontend
+    env: node
     buildCommand: cd frontend && npm install && npm run build
-    staticPublishPath: frontend/build
+    startCommand: cd frontend && npm install && npx serve -s build
     plan: free
-    autoDeploy: true
 
   - type: web
     name: webblogopeden-backend
@@ -19,4 +17,3 @@ services:
       - key: EMAIL_PASS
         sync: false
     plan: free
-    autoDeploy: true
