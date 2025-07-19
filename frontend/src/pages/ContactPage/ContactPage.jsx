@@ -8,19 +8,45 @@ export default function ContactForm() {
     message: ''
   });
 
+  const [isSending, setIsSending] = useState(false);
+  const [emailValid, setEmailValid] = useState(true);
+
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+
+    if (name === "email") {
+      setEmailValid(validateEmail(value));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateEmail(formData.email)) {
+      alert("Please enter a valid email.");
+      return;
+    }
+
+    setIsSending(true);
+
+    // Add a timeout to fail fast on very slow servers
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000); // 10s
 
     try {
       const res = await fetch("https://webblogopeden-backend-1.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
+        signal: controller.signal
       });
+
+      clearTimeout(timeout);
 
       if (!res.ok) {
         const errorData = await res.json();
@@ -30,8 +56,14 @@ export default function ContactForm() {
         setFormData({ name: "", email: "", message: "" });
       }
     } catch (err) {
-      console.error("Network error:", err);
-      alert("Could not connect to the server. Please try again later.");
+      if (err.name === "AbortError") {
+        alert("Server is too slow or unreachable. Please try again later.");
+      } else {
+        console.error("Network error:", err);
+        alert("Could not connect to the server. Please try again later.");
+      }
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -52,7 +84,9 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
+          style={{ borderColor: emailValid ? '' : 'red' }}
         />
+        {!emailValid && <small style={{ color: 'red' }}>Invalid email format</small>}
         <textarea
           name="message"
           placeholder="Message"
@@ -60,7 +94,16 @@ export default function ContactForm() {
           onChange={handleChange}
           required
         />
-        <button type="submit">Send</button>
+        <button type="submit" disabled={isSending}>
+          {isSending ? (
+            <div className="spinnerWithText">
+              <div className="spinner" />
+              <span style={{ marginLeft: "8px" }}>Sending...</span>
+            </div>
+          ) : (
+            "Send"
+          )}
+        </button>
       </form>
       <p>webblogopeden@gmail.com</p>
     </div>
