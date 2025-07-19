@@ -152,6 +152,11 @@ p {
 }
 
 @media (min-width: 700px) {
+
+    .HomePageBackgroundImgContainer {
+        background-size:cover;
+    }
+
     #Dyslexia, #Language {
         display: flex;
         justify-content: space-between;

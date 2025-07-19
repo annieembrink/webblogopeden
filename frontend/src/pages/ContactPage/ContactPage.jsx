@@ -28,7 +28,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     if (!validateEmail(formData.email)) {
-      alert("Please enter a valid email.");
+      alert("Skriv in en riktigt mail-adress");
       return;
     }
 
@@ -50,17 +50,17 @@ export default function ContactForm() {
 
       if (!res.ok) {
         const errorData = await res.json();
-        alert("Failed to send message: " + (errorData.message || "Unknown error"));
+        alert("Misslyckades med att skicka meddelandet: " + (errorData.message || "Unknown error"));
       } else {
-        alert("Message sent! Confirmation email has been sent.");
+        alert("Meddelandet är skickat! Ett bekräftelsemail har skickats till dig.");
         setFormData({ name: "", email: "", message: "" });
       }
     } catch (err) {
       if (err.name === "AbortError") {
-        alert("Server is too slow or unreachable. Please try again later.");
+        alert("Något gick fel... Försök igen senare.");
       } else {
         console.error("Network error:", err);
-        alert("Could not connect to the server. Please try again later.");
+        alert("Något gick fel... Försök igen senare.");
       }
     } finally {
       setIsSending(false);
@@ -72,7 +72,7 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="contact-form">
         <input
           name="name"
-          placeholder="Name"
+          placeholder="Namn"
           value={formData.name}
           onChange={handleChange}
           required
@@ -89,7 +89,7 @@ export default function ContactForm() {
         {!emailValid && <small style={{ color: 'red' }}>Invalid email format</small>}
         <textarea
           name="message"
-          placeholder="Message"
+          placeholder="Meddelande"
           value={formData.message}
           onChange={handleChange}
           required
@@ -98,10 +98,10 @@ export default function ContactForm() {
           {isSending ? (
             <div className="spinnerWithText">
               <div className="spinner" />
-              <span style={{ marginLeft: "8px" }}>Sending...</span>
+              <span style={{ marginLeft: "8px" }}>Skickar...</span>
             </div>
           ) : (
-            "Send"
+            "Skickar"
           )}
         </button>
       </form>

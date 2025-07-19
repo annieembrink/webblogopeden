@@ -12,7 +12,7 @@ app.post('/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
-    return res.status(400).json({ message: 'All fields are required.' });
+    return res.status(400).json({ message: 'Du behöver fylla i alla fält' });
   }
 
   try {
@@ -34,14 +34,14 @@ app.post('/contact', async (req, res) => {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'Thanks for contacting us!',
-      text: `Hi ${name},\n\nThanks for reaching out! We received your message:\n\n"${message}"\n\nWe'll be in touch soon.\n\n- Webblogopeden`,
+      subject: 'Tack för att du kontaktar oss!',
+      text: `Hi ${name},\n\nTack för att du kontaktar oss! Vi har mottagit ditt meddelande:\n\n"${message}"\n\nVi kommer kontakta dig så snart vi kan.\n\n- Webblogopeden`,
     });
 
-    res.status(200).json({ message: 'Emails sent successfully.' });
+    res.status(200).json({ message: 'Ditt meddelande har nu skickats' });
   } catch (error) {
     console.error('Email error:', error);
-    res.status(500).json({ message: 'Failed to send message.' });
+    res.status(500).json({ message: 'Meddelandet kunde inte skickas. Försök igen senare.' });
   }
 });
 
