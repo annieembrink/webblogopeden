@@ -21,7 +21,7 @@ const PricesPage = () => {
               </div>
               <div className="m30px">
                 <p>3-6 timmar</p>
-                <p className="m10px">8 000 kr</p>
+                <p className="m10px">10 000 kr</p>
                 <p>För alla åldrar</p>
                 <p>Väntetid 1-2 veckor</p>
                 <p>Ingår omfattande utredning samt intyg</p>
@@ -42,7 +42,7 @@ const PricesPage = () => {
               </div>
               <div className="m30px">
                 <p>3-6 timmar</p>
-                <p className="m10px">8 000 kr</p>
+                <p className="m10px">10 000 kr</p>
                 <p>För alla åldrar</p>
                 <p>Väntetid 1-2 veckor</p>
                 <p>Ingår omfattande utredning samt intyg</p>
