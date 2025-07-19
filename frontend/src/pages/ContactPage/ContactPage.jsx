@@ -86,7 +86,7 @@ export default function ContactForm() {
           required
           style={{ borderColor: emailValid ? '' : 'red' }}
         />
-        {!emailValid && <small style={{ color: 'red' }}>Invalid email format</small>}
+        {!emailValid && <small style={{ color: 'red' }}>Ogiltigt format</small>}
         <textarea
           name="message"
           placeholder="Meddelande"
@@ -101,7 +101,7 @@ export default function ContactForm() {
               <span style={{ marginLeft: "8px" }}>Skickar...</span>
             </div>
           ) : (
-            "Skickar"
+            "Skicka"
           )}
         </button>
       </form>
