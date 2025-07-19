@@ -19,9 +19,9 @@ const HomePage = () => {
         <div className="HomePageWelcomeText">
           {/* <h2>Välkommen till</h2>
           <h1>WEBBLOGOPEDEN</h1> */}
-          <h3>Din logoped i hela Sverige</h3>
-          <h4>Dyslexiutredningar och språkliga utredningar online i privat regi</h4>
-          <h4>Korta väntetider och inget krav på remiss</h4>
+          <h1>Din logoped i hela Sverige</h1>
+          <h2>Dyslexiutredningar och språkliga utredningar online i privat regi</h2>
+          <h2>Korta väntetider och inget krav på remiss</h2>
         </div>
         <div className="homePageContactButton">
           <button onClick={goToContact}>Kontakt och tidsbokning</button>
