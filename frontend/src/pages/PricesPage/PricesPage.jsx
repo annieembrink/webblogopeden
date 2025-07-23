@@ -20,7 +20,7 @@ const PricesPage = () => {
                 <h2 className="DyslexiaTitle">Dyslexiutredning</h2>
               </div>
               <div className="m30px">
-                <p>3-6 timmar</p>
+                {/* <p>3-6 timmar</p> */}
                 <p className="m10px">10 000 kr</p>
                 <p>För alla åldrar</p>
                 <p>Väntetid 1-2 veckor</p>
@@ -41,7 +41,7 @@ const PricesPage = () => {
                 <h2 className="LanguageTitle">Språkutredning</h2>
               </div>
               <div className="m30px">
-                <p>3-6 timmar</p>
+                {/* <p>3-6 timmar</p> */}
                 <p className="m10px">10 000 kr</p>
                 <p>För alla åldrar</p>
                 <p>Väntetid 1-2 veckor</p>
