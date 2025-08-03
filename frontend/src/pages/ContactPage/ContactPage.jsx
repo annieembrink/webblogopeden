@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MdEmail } from "react-icons/md";
 import "./ContactPage.css";
 
 export default function ContactForm() {
@@ -109,7 +110,10 @@ export default function ContactForm() {
       </form> */}
       <p className="">Du är varmt välkommen att skicka ett mail till mig för frågor och tidsbokning. Jag svarar så snart jag kan, ofta inom 1-2 dagar.</p>
       <br></br>
-      <p className="fatText">webblogopeden@gmail.com</p>
+      <p className="fatText">
+  <MdEmail style={{ marginRight: "8px", verticalAlign: "middle", color:'#44745F' }} />
+  webblogopeden@gmail.com
+</p>
     </div>
   );
 }
