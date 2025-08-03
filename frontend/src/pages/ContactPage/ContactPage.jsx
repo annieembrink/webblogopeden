@@ -108,6 +108,7 @@ export default function ContactForm() {
         </button>
       </form> */}
       <p className="">Skicka ett mail till mig så svarar jag så snart jag kan</p>
+      <br></br>
       <p>webblogopeden@gmail.com</p>
     </div>
   );
