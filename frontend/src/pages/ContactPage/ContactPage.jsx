@@ -107,9 +107,9 @@ export default function ContactForm() {
           )}
         </button>
       </form> */}
-      <p className="">Skicka ett mail till mig så svarar jag så snart jag kan</p>
+      <p className="">Du är varmt välkommen att skicka ett mail till mig för frågor och tidsbokning. Jag svarar så snart jag kan, ofta inom 1-2 dagar.</p>
       <br></br>
-      <p>webblogopeden@gmail.com</p>
+      <p className="fatText">webblogopeden@gmail.com</p>
     </div>
   );
 }
