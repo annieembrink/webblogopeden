@@ -39,7 +39,9 @@ export default function ContactForm() {
     const timeout = setTimeout(() => controller.abort(), 10000); // 10s
 
     try {
-      const res = await fetch("https://webblogopeden-backend-1.onrender.com/contact", {
+      const res = await fetch("http://localhost:5000/contact",
+      // const res = await fetch("https://webblogopeden-backend-1.onrender.com/contact", 
+        {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -69,7 +71,7 @@ export default function ContactForm() {
 
   return (
     <div className="contactContainer">
-      <form onSubmit={handleSubmit} className="contact-form">
+      {/* <form onSubmit={handleSubmit} className="contact-form">
         <input
           name="name"
           placeholder="Namn"
@@ -104,7 +106,8 @@ export default function ContactForm() {
             "Skicka"
           )}
         </button>
-      </form>
+      </form> */}
+      <p className="">Skicka ett mail till mig så svarar jag så snart jag kan</p>
       <p>webblogopeden@gmail.com</p>
     </div>
   );
