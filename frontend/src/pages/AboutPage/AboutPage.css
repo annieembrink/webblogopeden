@@ -1,17 +1,83 @@
-.aboutText p {
-    color: #44745F;
-    font-weight: 400;
-    width: 80%;
-    text-align: center;
-    margin: 20px auto;
+.aboutWrapper .HomePageBackgroundImgContainer {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.aboutText {
-    padding: 40px 0;
+.aboutContainer p,
+.aboutContainer h3,
+.cardContainer p {
+  color: #44745f;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
-@media (min-width: 700px) {
-  .aboutText p {
-    width: 50%;
+.aboutContainer {
+  padding-bottom: 30px;
+}
+
+#aboutText {
+  margin-top: 50px;
+  width: 90%;
+}
+
+#aboutText p {
+  font-weight: 400;
+}
+
+/* === BUBBLE CARDS === */
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: hidden;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  margin: 30px auto;
+  margin-bottom: 400px;
+}
+
+.infoCard {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.infoCard h4 {
+  margin-top: 12px;
+  color: #44745f;
+  font-size: 1.2rem;
+}
+
+.cardIcon {
+  font-size: 28px;
+  color: #44745f;
+  margin-bottom: 8px;
+}
+
+.Footer {
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .cardContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .infoCard {
+    flex: 1;
+    margin: 0 10px;
   }
 }
