@@ -1,31 +1,51 @@
-import "./DigitalCarePage.css"
+import "./DigitalCarePage.css";
+import { FaLaptopMedical, FaUserShield, FaComments } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const DigitalCarePage = () => {
-return (
 
-<div className="digitalCareWrapper">
+      const navigate = useNavigate();
+    
+      const goToContact = () => {
+        navigate("/contact");
+      };
+  return (
+    <div className="digitalCareWrapper">
 
-    <div className="digitalCareContainer HomePageBackgroundImgContainer"
-        style={{ backgroundImage: `url("/img/personsittingatcomputer.jpg")` }}>
+      <div
+        className="digitalCareContainer HomePageBackgroundImgContainer"
+        style={{ backgroundImage: `url("/img/personsittingatcomputer.jpg")` }}
+      >
         <div className="HomePageWelcomeText" id="digitalText">
-            <h3>Jag erbjuder logopedisk hjälp i hela Sverige online</h3>
+          {/* <h3>Jag erbjuder logopedisk hjälp i hela Sverige online</h3> */}
 
-            <div>
-                <p>Jag tar emot patienter från hela Sverige och erbjuder utredningar digitalt.
-                    Genom
-                    videomöten kan du få professionell logopedisk hjälp oavsett var du befinner dig.</p>
-            </div>
-            <div>
-                <p>Din integritet är skyddad genom en säker videolösning. Alla
-                    personuppgifter hanteras enligt GDPR och med hög sekretess.</p>
-            </div>
-
-            <div>
-                <p>Kontakta mig för att diskutera om en digital utredning kan passa dig!</p>
-            </div>
+          
         </div>
+      </div>
+    <div className="cardContainer">
+            <div className="infoCard">
+              <FaLaptopMedical className="cardIcon" />
+              <h4>Digital logopedhjälp</h4>
+              <p>Jag tar emot patienter från hela Sverige och erbjuder utredningar digitalt via videomöten.</p>
+            </div>
+
+            <div className="infoCard">
+              <FaUserShield className="cardIcon" />
+              <h4>Säkerhet & Sekretess</h4>
+              <p>Allt sker via en säker videolösning. Personuppgifter hanteras enligt GDPR och med hög sekretess.</p>
+            </div>
+
+            <div className="infoCard">
+              <FaComments className="cardIcon" />
+              <h4>Kontakta mig</h4>
+              <p>Du är varmt välkommen att höra av dig för att se om en digital utredning passar dig.</p>
+                <div className="homePageContactButton">
+          <button onClick={goToContact}>Kontakt och tidsbokning</button>
+        </div>
+            </div>
+          </div>
     </div>
-</div> );
-}
+  );
+};
 
 export default DigitalCarePage;

@@ -1,10 +1,14 @@
 .digitalCareWrapper .HomePageBackgroundImgContainer {
     height: auto;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.digitalCareContainer p, .digitalCareContainer h3 {
+.digitalCareContainer p,
+.digitalCareContainer h3, .cardContainer p {
     color: #44745F;
-    color: black;
     text-align: center;
     width: 80%;
     margin: auto;
@@ -24,3 +28,66 @@
     font-weight: 400;
 }
 
+/* === NY STIL FÖR "BUBBLOR" / INFO-KORT === */
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* margin-top: 30px; */
+    overflow-y: hidden;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    margin: 30px auto;
+    margin-bottom: 400px;
+}
+
+.infoCard {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.infoCard h4 {
+    margin-top: 12px;
+    color: #44745F;
+    font-size: 1.2rem;
+}
+
+.cardIcon {
+    font-size: 28px;
+    color: #44745F;
+    margin-bottom: 8px;
+}
+
+.Footer {
+    position: absolute;
+}
+
+/* Responsiv layout för bredare skärmar */
+@media (min-width: 768px) {
+    .cardContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .infoCard {
+        flex: 1;
+        margin: 0 10px;
+    }
+    .infoCard {
+    background: rgba(255, 255, 255, 0.6); /* halvgenomskinlig vit */
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(10px); /* suddar bakgrunden */
+    -webkit-backdrop-filter: blur(10px); /* för Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* tunn kant */
+}
+
+}
