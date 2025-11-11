@@ -12,7 +12,7 @@ const FooterComponent = () => {
             />
         </div>
         <div id="footerContact">
-            <p>Farsta, Stockholm</p>
+            <p>Stockholm</p>
             <p>webblogopeden@gmail.com</p>
             <p><FaRegCopyright style={{ marginRight: "5px" }} />Copyright 2025, webblogopeden</p>
         </div>

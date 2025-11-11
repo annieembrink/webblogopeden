@@ -25,8 +25,7 @@ const AboutPage = () => {
           <FaGraduationCap className="cardIcon" />
           <h4>Utbildning & Legitimation</h4>
           <p>
-            Jag heter Annie och är legitimerad logoped sedan 2016, med examen
-            från Karolinska Institutet i Stockholm.
+            På Webblogopeden arbetar enbart legitimerade logopeder. Legitimationen ger oss befogenhet att utreda och diagnostisera dyslexi och språkstörning hos både barn och vuxna.
           </p>
         </div>
 
@@ -34,7 +33,7 @@ const AboutPage = () => {
           <FaGlobeEurope className="cardIcon" />
           <h4>Webblogopeden</h4>
           <p>
-            År 2025 grundade jag Webblogopeden – en digital tjänst som syftar
+            Webblogopeden är en digital tjänst som syftar
             till att öka tillgängligheten till utredningar av dyslexi och
             språkstörning i hela Sverige, helt utan krav på remiss.
           </p>
@@ -45,7 +44,7 @@ const AboutPage = () => {
           <h4>Erfarenhet & Fokus</h4>
           <p>
             Med gedigen erfarenhet av läs- och skrivsvårigheter samt språk- och
-            kommunikationsproblem erbjuder jag individuellt anpassad logopedisk
+            kommunikationsproblem erbjuder vi individuellt anpassad logopedisk
             hjälp i privat regi.
           </p>
           <div className="homePageContactButton">
