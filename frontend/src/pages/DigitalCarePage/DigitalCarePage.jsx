@@ -26,7 +26,7 @@ const DigitalCarePage = () => {
             <div className="infoCard">
               <FaLaptopMedical className="cardIcon" />
               <h4>Digital logopedhjälp</h4>
-              <p>Jag tar emot patienter från hela Sverige och erbjuder utredningar digitalt via videomöten.</p>
+              <p>Vi tar emot patienter från hela Sverige och erbjuder utredningar digitalt via videomöten.</p>
             </div>
 
             <div className="infoCard">
@@ -37,7 +37,7 @@ const DigitalCarePage = () => {
 
             <div className="infoCard">
               <FaComments className="cardIcon" />
-              <h4>Kontakta mig</h4>
+              <h4>Kontakta oss</h4>
               <p>Du är varmt välkommen att höra av dig för att se om en digital utredning passar dig.</p>
                 <div className="homePageContactButton">
           <button onClick={goToContact}>Kontakt och tidsbokning</button>
