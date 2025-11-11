@@ -13,7 +13,7 @@ const AboutPage = () => {
     <div className="aboutWrapper">
       <div
         className="aboutContainer HomePageBackgroundImgContainer"
-        style={{ backgroundImage: `url("/img/nature.jpg")` }}
+        style={{ backgroundImage: `url("/img/bookandtea.jpg")` }}
       >
         <div className="HomePageWelcomeText" id="aboutText">
           {/* Optional title can go here */}
